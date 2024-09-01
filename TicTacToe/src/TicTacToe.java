@@ -13,7 +13,20 @@ public class TicTacToe implements ActionListener {
     JButton[] buttons = new JButton[9];
     boolean player1_turn; //true if p1 turn, false if p2 turn, so no need for p2 variable
 
-    TicTacToe() {}
+    TicTacToe() {
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(800,800);
+        frame.getContentPane().setBackground(new Color(50,50,50));
+        frame.setLayout(new BorderLayout());
+        frame.setVisible(true);
+
+        textfield.setBackground(new Color(25,25,25));
+        textfield.setForeground(new Color(25,255,0));
+        textfield.setFont(new Font("Ink Free",Font.BOLD,75));
+        textfield.setHorizontalAlignment(JLabel.CENTER);
+        textfield.setText("Tic-Tac-Toe");
+        textfield.setOpaque(true);
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {}
